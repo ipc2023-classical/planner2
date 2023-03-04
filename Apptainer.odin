@@ -61,5 +61,5 @@ SupportsUniversallyQuantifiedEffects            yes
 SupportsNegativePreconditions                   yes
 SupportsEqualityPreconditions                   yes
 SupportsInequalityPreconditions                 yes
-SupportsConditionalEffects                      yes
+SupportsConditionalEffects                      no
 SupportsImplyPreconditions                      yes
