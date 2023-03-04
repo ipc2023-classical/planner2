@@ -12,14 +12,14 @@ Stage: build
     apt-get -y install --no-install-recommends cmake g++ make python3.11 autoconf automake
 
     ## Clear build directory.
-    rm -rf /planner/scorpion/builds
+    rm -rf /planner/odin/builds
 
     ## Build planner.
-    cd /planner/scorpion
+    cd /planner/odin
     python3.11 build.py
 
     ## Strip binaries.
-    strip --strip-all /planner/scorpion/builds/release/bin/downward /planner/scorpion/builds/release/bin/preprocess-h2
+    strip --strip-all /planner/odin/builds/release/bin/downward /planner/odin/builds/release/bin/preprocess-h2
 
 # Stage 2: Run the planner
 Bootstrap: docker
@@ -27,9 +27,9 @@ From: ubuntu:22.04
 Stage: run
 
 %files from build
-    /planner/scorpion/driver
-    /planner/scorpion/fast-downward.py
-    /planner/scorpion/builds/release/bin
+    /planner/odin/driver
+    /planner/odin/fast-downward.py
+    /planner/odin/builds/release/bin
 
 %post
     apt-get update
@@ -42,7 +42,7 @@ Stage: run
     PROBLEMFILE="$2"
     PLANFILE="$3"
 
-    python3.11 /planner/scorpion/fast-downward.py \
+    python3.11 /planner/odin/fast-downward.py \
         --plan-file "$PLANFILE" \
         "$DOMAINFILE" \
         "$PROBLEMFILE" \
