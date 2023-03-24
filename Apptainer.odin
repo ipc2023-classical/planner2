@@ -56,7 +56,6 @@ Stage: run
     PLANFILE="$3"
 
     pypy3 /plan.py \
-        --overall-memory-limit 7680M \
         --overall-time-limit 30m \
         --transform-task /planners/odin/builds/release/bin/preprocess-h2 \
         --transform-task-options h2_time_limit,180 \
