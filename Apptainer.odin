@@ -66,7 +66,7 @@ Stage: run
 
 %labels
 Name        Odin
-Description Classical planning system with transition cost partitioning algorithms
+Description Transition cost partitioning over abstraction heuristics
 Authors     Dominik Drexler <dominik.drexler@liu.se>, Jendrik Seipp <jendrik.seipp@liu.se>, David Speck <david.speck@liu.se>
 License     GPL 3
 Tracks      optimal
