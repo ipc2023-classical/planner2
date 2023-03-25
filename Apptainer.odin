@@ -70,7 +70,7 @@ Description Classical planning system with transition cost partitioning algorith
 Authors     Dominik Drexler <dominik.drexler@liu.se>, Jendrik Seipp <jendrik.seipp@liu.se>, David Speck <david.speck@liu.se>
 License     GPL 3
 Tracks      optimal
-SupportsDerivedPredicates                       no
+SupportsDerivedPredicates                       yes
 SupportsUniversallyQuantifiedPreconditions      yes
 SupportsExistentiallyQuantifiedPreconditions    yes
 SupportsUniversallyQuantifiedEffects            yes
